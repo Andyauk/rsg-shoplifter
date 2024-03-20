@@ -36,7 +36,8 @@ local function AttemptPoliceAlert()
             chance = Config.PoliceNightAlertChance
         end
         if math.random() <= chance then
-            TriggerServerEvent('rsg-lawman:server:lawmanAlert', 'People are shoplifting')
+            --TriggerServerEvent('rsg-lawman:server:lawmanAlert', 'People are shoplifting')
+            TriggerServerEvent('rsg-lawman:server:lawmanAlert', Config.Translations.PoliceAlertMessage)
         end
         AlertSend = true
         SetTimeout(Config.AlertCooldown, function()
